@@ -1,0 +1,6 @@
+package org.javacream.books.warehouse.business.withinterfaces;
+
+public interface OrderService {
+
+	Order order(String customerId, String[] isbns);
+}

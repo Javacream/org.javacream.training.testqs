@@ -1,0 +1,67 @@
+1330935825859	Delete element
+1330935845375	Move compilation units
+1330935851515	Delete element
+1330936031828	Delete element
+1330936357156	Delete element
+1330944617500	Rename type 'SimpleStoreServiceTest'
+1330944629625	Copy compilation unit
+1330949308546	Copy compilation unit
+1330949326406	Delete element
+1330949445312	Copy compilation unit
+1330949566484	Rename resource 'books-store.properties'
+1330949590937	Rename resource '_books-store.properties'
+1330952494843	Copy compilation unit
+1330952579359	Copy compilation unit
+1330952594203	Rename type 'CopyOfSimpleStoreServiceTest'
+1330954305031	Rename resource '_books-store.properties'
+1330954425375	Rename type 'MapBooksServiceTest'
+1330954433015	Copy compilation unit
+1330954585750	Copy compilation units
+1330956490421	Copy file
+1330959873375	Delete element
+1330960252218	Rename type 'CounterIsbnGeneratorTest'
+1330960257765	Rename type 'PropertiesUtilTest'
+1331020683437	Delete element
+1331021135234	Move compilation unit
+1331025024187	Copy package
+1331025044421	Copy package
+1331025052031	Rename package 'org.javacream.books.warehouse.business.ok.withinterfaces'
+1331025084031	Extract interface 'IsbnGenerator'
+1331025097265	Extract interface 'BooksService'
+1331025107687	Extract interface 'StoreService'
+1331025156093	Rename type 'PropertiesUtil'
+1331025167796	Extract interface 'PropertiesUtil'
+1331025233843	Copy file
+1331025333500	Rename package 'org.javacream.books.warehouse.business.withinterfaces'
+1331025351593	Move elements
+1331025580578	Copy packages
+1331027298593	Delete element
+1331027757515	Copy compilation unit
+1331032446968	Copy compilation unit
+1331037420703	Copy compilation unit
+1331037979796	Rename method 'addIsbn'
+1331038011187	Rename method 'returnForNextIsbn'
+1331038306656	Copy compilation unit
+1331039016875	Rename type 'IsbnGeneratorConfigurableTestDriver'
+1331039275171	Copy compilation unit
+1331039697453	Copy compilation unit
+1331040616031	Move compilation unit
+1331040649859	Copy compilation units
+1331040699140	Copy compilation unit
+1331040717343	Copy compilation unit
+1331040727906	Move compilation unit
+1331040734203	Move compilation unit
+1331040737093	Move compilation unit
+1331040741734	Move compilation unit
+1331040745000	Move compilation unit
+1331043351265	Delete element
+1331104850656	Delete element
+1331104852390	Delete element
+1331104854156	Delete element
+1331104860015	Delete element
+1331104865062	Delete element
+1331104868796	Delete element
+1331104870234	Delete element
+1331104871593	Delete element
+1331104873140	Delete element
+1331104875328	Delete element

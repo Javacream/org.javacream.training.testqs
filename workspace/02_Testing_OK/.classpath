@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-beanutils-1.7.0/commons-beanutils-bean-collections.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-beanutils-1.7.0/commons-beanutils-core.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-beanutils-1.7.0/commons-beanutils.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-collections-3.2/commons-collections-3.2.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-lang-2.3/commons-lang-2.3.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-logging-1.1/commons-logging-1.1.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-logging-1.1/commons-logging-adapters-1.1.jar"/>
+	<classpathentry kind="var" path="TOOLS_HOME/apache commons/commons-logging-1.1/commons-logging-api-1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="var" path="TOOLS_HOME/easymock2.4/easymock.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,36 @@
+<project basedir=".." default="junit" name="run junit tests">
+	<property name="tools.dir" value="../../tools" />
+	<property name="classes.dir" value="bin" />
+	<property name="result.dir" value="results/junit" />
+	<property name="report.dir" value="reports/junit" />
+	<path id="classpath">
+		<path path="${classes.dir}" />
+		<fileset dir="${tools.dir}/junit4.5" includes="*.jar" />
+	</path>
+	<target name="prepare">
+		<delete failonerror="false" includeemptydirs="true">
+			<fileset dir="${result.dir}" includes="**/*.*" />
+			<fileset dir="${report.dir}" includes="**/*.*" />
+		</delete>
+		<mkdir dir="${result.dir}" />
+		<mkdir dir="${report.dir}" />
+			
+	</target>
+	<target name="junit" depends="prepare">
+		<junit fork="yes" showoutput="true" printsummary="true">
+			<classpath refid="classpath" />
+			<test name="org.javacream.books.warehouse.business.ok.MapBooksServiceNewTest" todir="${result.dir}" />
+			<test name="org.javacream.books.warehouse.business.ok.MapBooksServiceFindTest" todir="${result.dir}" />
+			<test name="org.javacream.books.warehouse.business.ok.CounterIsbnGeneratorUnitTest" todir="${result.dir}" />
+			<test name="org.javacream.books.warehouse.business.ok.SimpleStoreServiceTest" todir="${result.dir}" />
+			<test name="org.javacream.books.warehouse.business.ok.PropertiesUtilUnitTest" todir="${result.dir}" />
+			<formatter usefile="true" type="xml" />
+		</junit>
+		<junitreport todir="${report.dir}">
+			<fileset dir="${result.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${report.dir}" />
+		</junitreport>
+	</target>
+</project>

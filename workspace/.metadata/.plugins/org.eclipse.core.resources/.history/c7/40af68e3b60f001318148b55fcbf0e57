@@ -1,0 +1,5 @@
+package org.javacream.demo;
+
+public interface Egal {
+
+}

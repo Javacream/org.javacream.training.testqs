@@ -1,0 +1,9 @@
+package org.javacream.books.warehouse.withinterfaces;
+
+import java.util.Properties;
+
+public interface PropertiesUtil {
+
+	public abstract Properties getProperties(String name);
+
+}

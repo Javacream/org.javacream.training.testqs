@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CounterIsbnGeneratorUnitTest" project="03_Testing_Design" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.javacream.books.warehouse.business.CounterIsbnGeneratorUnitTest" time="0.015">
+    <testcase name="testNextIsbnFormat" classname="org.javacream.books.warehouse.business.CounterIsbnGeneratorUnitTest" time="0.015"/>
+    <testcase name="testSuffix" classname="org.javacream.books.warehouse.business.CounterIsbnGeneratorUnitTest" time="0.0"/>
+    <testcase name="testUnique" classname="org.javacream.books.warehouse.business.CounterIsbnGeneratorUnitTest" time="0.0"/>
+  </testsuite>
+</testrun>

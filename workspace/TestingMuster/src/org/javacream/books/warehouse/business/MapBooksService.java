@@ -1,0 +1,67 @@
+package org.javacream.books.warehouse.business;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.javacream.books.warehouse.Book;
+import org.javacream.books.warehouse.BooksService;
+import org.javacream.books.warehouse.IsbnGenerator;
+import org.javacream.books.warehouse.StoreService;
+
+
+public class MapBooksService implements BooksService{
+
+	private static Map<String, Book> books;
+
+	private IsbnGenerator isbnGenerator;
+
+	private StoreService storeService;
+
+	{
+		books = new HashMap<String, Book>();
+		isbnGenerator = new CounterIsbnGenerator();
+		storeService = new SimpleStoreService();
+	}
+
+
+	/* (non-Javadoc)
+	 * @see org.javacream.books.warehouse.business.withinterfaces.BooksService#newBook(java.lang.String)
+	 */
+	@Override
+	public String newBook(String title) {
+		if (title == null){
+			throw new IllegalArgumentException("title was null");
+		}
+		if (title.trim().length() < 3){
+			throw new IllegalArgumentException("title to short: " + title);
+		}
+		String isbn = isbnGenerator.nextIsbn();
+		Book book = new Book();
+		book.setTitle(title);
+		book.setIsbn(isbn);
+		books.put(isbn, book);
+//		book.setIsbn(isbnGenerator.nextIsbn());
+//		books.put(book.getIsbn(), book);
+
+		return book.getIsbn();
+	}
+
+	/* (non-Javadoc)
+	 * @see org.javacream.books.warehouse.business.withinterfaces.BooksService#findBookByIsbn(java.lang.String)
+	 */
+	@Override
+	public Book findBookByIsbn(String isbn) {
+		if (isbn == null){
+			throw new IllegalArgumentException("isbn was null");
+		}
+		Book book = (Book) books.get(isbn);
+		if (book == null){
+			throw new IllegalArgumentException("book not found");
+		}
+		book.setAvailable(storeService.getStock("Books", isbn) > 0);
+		return book;
+	}
+	
+	
+
+}

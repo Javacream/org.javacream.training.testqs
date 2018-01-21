@@ -1,0 +1,10 @@
+package org.javacream.books.warehouse.withinterfaces;
+
+
+public interface BooksService {
+
+	public abstract String newBook(String title);
+
+	public abstract Book findBookByIsbn(String isbn);
+
+}

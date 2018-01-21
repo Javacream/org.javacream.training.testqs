@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MapBooksServiceNewTest (3)" project="03_Testing_Design" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.javacream.books.warehouse.business.MapBooksServiceNewTest" time="0.0">
+    <testcase name="testNewBook" classname="org.javacream.books.warehouse.business.MapBooksServiceNewTest" time="0.0"/>
+  </testsuite>
+</testrun>
