@@ -2,7 +2,7 @@ package org.javacream.training.books.warehouse.business;
 
 import java.util.Properties;
 
-import org.javacream.books.warehouse.business.PropertiesUtil;
+import org.javacream.util.PropertiesUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

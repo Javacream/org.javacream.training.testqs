@@ -1,18 +1,22 @@
-package org.javacream.books.warehouse.business;
+package org.javacream.books.warehouse.implementation;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.javacream.books.warehouse.Book;
+import org.javacream.books.warehouse.api.Book;
+import org.javacream.books.warehouse.api.BooksService;
+import org.javacream.books.warehouse.api.IsbnGenerator;
+import org.javacream.store.api.StoreService;
+import org.javacream.store.implementation.SimpleStoreService;
 
 
-public class MapBooksService{
+public class MapBooksService implements BooksService{
 
 	private static Map<String, Book> books;
 
-	private CounterIsbnGenerator isbnGenerator;
+	private IsbnGenerator isbnGenerator;
 
-	private SimpleStoreService storeService;
+	private StoreService storeService;
 
 	{
 		books = new HashMap<String, Book>();
@@ -21,6 +25,10 @@ public class MapBooksService{
 	}
 
 
+	/* (non-Javadoc)
+	 * @see org.javacream.books.warehouse.business.BooksService#newBook(java.lang.String)
+	 */
+	@Override
 	public String newBook(String title) {
 		if (title == null){
 			throw new IllegalArgumentException("title was null");
@@ -39,6 +47,10 @@ public class MapBooksService{
 		return book.getIsbn();
 	}
 
+	/* (non-Javadoc)
+	 * @see org.javacream.books.warehouse.business.BooksService#findBookByIsbn(java.lang.String)
+	 */
+	@Override
 	public Book findBookByIsbn(String isbn) {
 		if (isbn == null){
 			throw new IllegalArgumentException("isbn was null");

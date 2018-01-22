@@ -1,12 +1,13 @@
 package org.javacream.training.books.warehouse.business;
 
-import org.javacream.books.warehouse.business.SimpleStoreService;
+import org.javacream.store.api.StoreService;
+import org.javacream.store.implementation.SimpleStoreService;
 import org.junit.Assert;
 import org.junit.Before;
 
 public class SimpleStoreServiceTest {
 
-	private SimpleStoreService simpleStoreService;
+	private StoreService simpleStoreService;
 
 	@Before public void init() {
 		simpleStoreService = new SimpleStoreService();

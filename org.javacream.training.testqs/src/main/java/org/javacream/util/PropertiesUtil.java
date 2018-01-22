@@ -1,4 +1,4 @@
-package org.javacream.books.warehouse.business;
+package org.javacream.util;
 
 import java.util.Properties;
 
