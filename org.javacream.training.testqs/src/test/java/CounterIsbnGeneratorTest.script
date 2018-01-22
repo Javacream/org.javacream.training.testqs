@@ -1,0 +1,11 @@
+suffix = "-de"
+
+counterIsbnGenerator = new CounterIsbnGenerator();
+counterIsbnGenerator.setSuffix(suffix);
+
+isbn = counterIsbnGenerator.next();
+isbn2 = counterIsbnGenerator.next();
+
+assert true isbn endsWith suffix
+assert isbn not null
+assert isbn not equal isbn2
