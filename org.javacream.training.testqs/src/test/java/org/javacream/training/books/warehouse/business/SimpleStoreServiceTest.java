@@ -1,5 +1,6 @@
 package org.javacream.training.books.warehouse.business;
 
+import org.javacream.Context;
 import org.javacream.store.api.StoreService;
 import org.javacream.store.implementation.SimpleStoreService;
 import org.junit.Assert;
@@ -10,7 +11,7 @@ public class SimpleStoreServiceTest {
 	private StoreService simpleStoreService;
 
 	@Before public void init() {
-		simpleStoreService = new SimpleStoreService();
+		simpleStoreService = Context.storeService();
 	}
 	
 	public void stockMustBeRetrieved() {

@@ -4,15 +4,18 @@ import java.util.HashMap;
 import java.util.Properties;
 
 import org.javacream.store.api.StoreService;
-import org.javacream.util.PropertiesUtil;
 
 public class SimpleStoreService implements StoreService {
 
 	private HashMap<String, Properties> store;
 
+	public void setStore(HashMap<String, Properties> store) {
+		this.store = store;
+	}
+
 	{
 		store = new HashMap<String, Properties>();
-		store.put("books", PropertiesUtil.getProperties("books-store.properties"));
+		//store.put("books", PropertiesUtil.getProperties("books-store.properties"));
 	}
 
 	/* (non-Javadoc)

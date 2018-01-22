@@ -1,6 +1,7 @@
 package org.javacream.training.books.warehouse.business;
 
-import org.javacream.books.warehouse.implementation.CounterIsbnGenerator;
+import org.javacream.Context;
+import org.javacream.books.warehouse.api.IsbnGenerator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,29 +17,28 @@ public class CounterIsbnGeneratorTest {
 	private String suffix;
 	private String generatedIsbn;
 	private String generatedIsbn2;
-	private CounterIsbnGenerator counterIsbnGenerator;
+	private IsbnGenerator isbnGenerator;
 
 	@Before //Test Fixture: Definition der Testdaten, Erzeugen der zu testenden Objekte
 	public void init() {
 		suffix = "-de";
-		counterIsbnGenerator = new CounterIsbnGenerator();
-		counterIsbnGenerator.setSuffix(suffix);
-
+		isbnGenerator = Context.isbnGenerator();
+		
 	}
 	@Test
 	public void generatedIsbnMustNotBeNull() {
-		generatedIsbn = counterIsbnGenerator.nextIsbn();
+		generatedIsbn = isbnGenerator.nextIsbn();
 		Assert.assertNotNull(generatedIsbn);
 	}
 	@Test
 	public void generatedIsbnMustEndWithProvidedSuffix() {
-		generatedIsbn = counterIsbnGenerator.nextIsbn();
+		generatedIsbn = isbnGenerator.nextIsbn();
 		Assert.assertTrue(generatedIsbn.endsWith(suffix));
 	}
 	@Test
 	public void generatedIsbnsMustBeUnique() {
-		generatedIsbn = counterIsbnGenerator.nextIsbn();
-		generatedIsbn2 = counterIsbnGenerator.nextIsbn();
+		generatedIsbn = isbnGenerator.nextIsbn();
+		generatedIsbn2 = isbnGenerator.nextIsbn();
 		Assert.assertNotEquals(generatedIsbn, generatedIsbn2);
 	}
 

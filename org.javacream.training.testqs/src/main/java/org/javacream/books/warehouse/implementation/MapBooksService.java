@@ -7,7 +7,6 @@ import org.javacream.books.warehouse.api.Book;
 import org.javacream.books.warehouse.api.BooksService;
 import org.javacream.books.warehouse.api.IsbnGenerator;
 import org.javacream.store.api.StoreService;
-import org.javacream.store.implementation.SimpleStoreService;
 
 
 public class MapBooksService implements BooksService{
@@ -16,12 +15,19 @@ public class MapBooksService implements BooksService{
 
 	private IsbnGenerator isbnGenerator;
 
+
+	public void setIsbnGenerator(IsbnGenerator isbnGenerator) {
+		this.isbnGenerator = isbnGenerator;
+	}
+
+	public void setStoreService(StoreService storeService) {
+		this.storeService = storeService;
+	}
+
 	private StoreService storeService;
 
 	{
 		books = new HashMap<String, Book>();
-		isbnGenerator = new CounterIsbnGenerator();
-		storeService = new SimpleStoreService();
 	}
 
 

@@ -10,7 +10,7 @@ public abstract class PropertiesUtil {
 			properties.load(PropertiesUtil.class.getResourceAsStream(name));
 			return properties;
 		} catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			throw new IllegalArgumentException(e.getMessage());
 		}
 
