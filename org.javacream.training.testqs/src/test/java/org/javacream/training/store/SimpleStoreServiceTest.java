@@ -1,10 +1,10 @@
-package org.javacream.training.books.warehouse.business;
+package org.javacream.training.store;
 
 import org.javacream.Context;
 import org.javacream.store.api.StoreService;
-import org.javacream.store.implementation.SimpleStoreService;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 public class SimpleStoreServiceTest {
 
@@ -14,6 +14,7 @@ public class SimpleStoreServiceTest {
 		simpleStoreService = Context.storeService();
 	}
 	
+	@Test
 	public void stockMustBeRetrieved() {
 		String category = "";
 		String id = "";
