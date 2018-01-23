@@ -1,18 +1,25 @@
 package org.javacream.books.warehouse.implementation;
 
 import org.javacream.books.warehouse.api.IsbnGenerator;
+import org.javacream.util.idgenerator.api.IdGenerator;
 
-public class CounterIsbnGenerator implements IsbnGenerator{
+public class IsbnGeneratorImplementation implements IsbnGenerator {
 
-	private int counter;
+	private IdGenerator idGenerator;
 	private String suffix;
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.javacream.books.warehouse.business.IsbnGenerator#nextIsbn()
 	 */
 	@Override
 	public String nextIsbn() {
-		return counter++ + "-123-12345-1" + suffix;
+		return idGenerator.next() + "-123-12345-1" + suffix;
+	}
+
+	public void setIdGenerator(IdGenerator idGenerator) {
+		this.idGenerator = idGenerator;
 	}
 
 	public void setSuffix(String suffix) {

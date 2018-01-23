@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author rainer
  *
  */
-public class CounterIsbnGeneratorTest {
+public class IsbnGeneratorTest {
 
 	
 	private String suffix;

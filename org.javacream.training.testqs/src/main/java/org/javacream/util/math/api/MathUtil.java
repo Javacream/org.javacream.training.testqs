@@ -1,4 +1,4 @@
-package org.javacream.util;
+package org.javacream.util.math.api;
 
 public interface MathUtil {
 	double areaOfRectangle(double height, double width);

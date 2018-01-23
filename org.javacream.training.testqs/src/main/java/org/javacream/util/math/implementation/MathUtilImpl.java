@@ -1,6 +1,6 @@
-package org.javacream.util.implementation;
+package org.javacream.util.math.implementation;
 
-import org.javacream.util.MathUtil;
+import org.javacream.util.math.api.MathUtil;
 
 public class MathUtilImpl implements MathUtil {
 

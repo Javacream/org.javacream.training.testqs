@@ -1,6 +1,6 @@
-package org.javacream.util;
+package org.javacream.util.math;
 
-import org.javacream.util.implementation.MathUtilImpl;
+import org.javacream.util.math.implementation.MathUtilImpl;
 import org.javacream.util.test.Specification;
 import org.javacream.util.test.SpecifiedBy;
 import org.junit.Before;
