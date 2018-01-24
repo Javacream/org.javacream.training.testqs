@@ -43,6 +43,8 @@ public class MapBooksService implements BooksService{
 			throw new IllegalArgumentException("title to short: " + title);
 		}
 		String isbn = isbnGenerator.nextIsbn();
+		//isbn = "ISBN" + Math.random();
+		//isbn = isbnGenerator.nextIsbn();
 		Book book = new Book();
 		book.setTitle(title);
 		book.setIsbn(isbn);
@@ -65,7 +67,7 @@ public class MapBooksService implements BooksService{
 		if (book == null){
 			throw new IllegalArgumentException("book not found");
 		}
-		book.setAvailable(storeService.getStock("Books", isbn) > 0);
+		book.setAvailable(storeService.getStock("books", isbn) > 0);
 		return book;
 	}
 	

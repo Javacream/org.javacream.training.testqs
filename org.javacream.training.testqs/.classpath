@@ -32,5 +32,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/media/rainer/Data/Integrata/Java/33065/easymock-3.2/easymock-3.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
