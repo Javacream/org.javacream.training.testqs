@@ -7,11 +7,29 @@ public class Order {
 	private String customer;
 	private double totalPrice;
 	private String address;
+	private int number;
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
+		this.number = number;
+	}
 	private OrderStatus status;
 	@Override
 	public String toString() {
 		return "Order [orderId=" + orderId + ", isbn=" + isbn + ", customer=" + customer + ", totalPrice=" + totalPrice
-				+ ", address=" + address + ", status=" + status + "]";
+				+ ", address=" + address + ", number=" + number + ", status=" + status + "]";
+	}
+	public Order(long orderId, String isbn, String customer, double totalPrice, String address, int number,
+			OrderStatus status) {
+		super();
+		this.orderId = orderId;
+		this.isbn = isbn;
+		this.customer = customer;
+		this.totalPrice = totalPrice;
+		this.address = address;
+		this.number = number;
+		this.status = status;
 	}
 	@Override
 	public int hashCode() {
@@ -20,6 +38,7 @@ public class Order {
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
 		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
 		result = prime * result + ((isbn == null) ? 0 : isbn.hashCode());
+		result = prime * result + number;
 		result = prime * result + (int) (orderId ^ (orderId >>> 32));
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		long temp;
@@ -51,6 +70,8 @@ public class Order {
 				return false;
 		} else if (!isbn.equals(other.isbn))
 			return false;
+		if (number != other.number)
+			return false;
 		if (orderId != other.orderId)
 			return false;
 		if (status != other.status)
@@ -58,15 +79,6 @@ public class Order {
 		if (Double.doubleToLongBits(totalPrice) != Double.doubleToLongBits(other.totalPrice))
 			return false;
 		return true;
-	}
-	public Order(long orderId, String isbn, String customer, double totalPrice, String address, OrderStatus status) {
-		super();
-		this.orderId = orderId;
-		this.isbn = isbn;
-		this.customer = customer;
-		this.totalPrice = totalPrice;
-		this.address = address;
-		this.status = status;
 	}
 	public long getOrderId() {
 		return orderId;

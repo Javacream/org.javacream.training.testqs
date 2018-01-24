@@ -1,4 +1,4 @@
-package org.javacream.training.books.warehouse.business;
+package org.javacream.books.warehouse.business;
 
 import org.javacream.Context;
 import org.javacream.books.warehouse.api.IsbnGenerator;

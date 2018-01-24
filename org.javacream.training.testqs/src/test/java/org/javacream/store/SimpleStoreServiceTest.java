@@ -1,4 +1,4 @@
-package org.javacream.training.store;
+package org.javacream.store;
 
 import org.javacream.Context;
 import org.javacream.store.api.StoreService;
