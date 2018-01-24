@@ -16,6 +16,7 @@ import org.javacream.order.api.OrderStatus;
 import org.javacream.order.implementation.OrderServiceImpl;
 import org.javacream.store.api.StoreService;
 import org.javacream.util.idgenerator.api.IdGenerator;
+import org.javacream.util.test.XmlRecordingDecorator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -187,6 +188,7 @@ public class OrderServiceTest {
 		orderServiceImpl.setIdGenerator(idGenerator);
 		orderServiceImpl.setStoreService(storeService);
 		orderService = orderServiceImpl;
+		orderService = XmlRecordingDecorator.decorate(orderService, "/tmp/order_recording.xml");
 	}
 
 }

@@ -33,5 +33,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/media/rainer/Data/Integrata/Java/33065/easymock-3.2/easymock-3.2.jar"/>
+	<classpathentry kind="lib" path="/media/rainer/Data/Integrata/Java/33065/apache commons/commons-lang-2.3/commons-lang-2.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

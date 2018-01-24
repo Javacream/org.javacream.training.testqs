@@ -61,7 +61,7 @@ public abstract class Context {
 		//SET ATTRIBUTES
 		idGenerator = sequenceIdGenerator;
 		booksService = mapBooksService;
-		isbnGenerator = profilingIsbnGeneratorDecorator;
+		isbnGenerator = isbnGeneratorImpl;
 		storeService = decoratedStoreService;
 		demo = profilingDemoDecorator;
 	}
