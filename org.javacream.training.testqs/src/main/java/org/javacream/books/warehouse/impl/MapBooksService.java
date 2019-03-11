@@ -4,24 +4,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.javacream.books.warehouse.api.Book;
+import org.javacream.books.warehouse.api.BooksService;
 import org.javacream.books.warehouse.api.IsbnGenerator;
+import org.javacream.books.warehouse.api.StoreService;
 
+public class MapBooksService implements BooksService{
 
-public class MapBooksService{
+	public void setIsbnGenerator(IsbnGenerator isbnGenerator) {
+		this.isbnGenerator = isbnGenerator;
+	}
+
+	public void setStoreService(StoreService storeService) {
+		this.storeService = storeService;
+	}
 
 	private static Map<String, Book> books;
 
 	private IsbnGenerator isbnGenerator;
 
-	private SimpleStoreService storeService;
+	private StoreService storeService;
 
 	{
 		books = new HashMap<String, Book>();
-		isbnGenerator = new CounterIsbnGenerator();
-		storeService = new SimpleStoreService();
 	}
 
 
+	@Override
 	public String newBook(String title) {
 		if (title == null){
 			throw new IllegalArgumentException("title was null");
@@ -40,6 +48,7 @@ public class MapBooksService{
 		return book.getIsbn();
 	}
 
+	@Override
 	public Book findBookByIsbn(String isbn) {
 		if (isbn == null){
 			throw new IllegalArgumentException("isbn was null");
