@@ -1,6 +1,6 @@
-package org.javacream.books.warehouse.impl;
+package org.javacream.books.isbngenerator.impl;
 
-import org.javacream.books.warehouse.api.IsbnGenerator;
+import org.javacream.books.isbngenerator.api.IsbnGenerator;
 
 public class CounterIsbnGenerator implements IsbnGenerator{
 

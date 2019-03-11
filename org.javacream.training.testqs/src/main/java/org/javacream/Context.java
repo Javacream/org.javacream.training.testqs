@@ -1,12 +1,12 @@
 package org.javacream;
 
+import org.javacream.books.isbngenerator.api.IsbnGenerator;
+import org.javacream.books.isbngenerator.impl.CounterIsbnGenerator;
 import org.javacream.books.warehouse.api.BooksService;
-import org.javacream.books.warehouse.api.IsbnGenerator;
-import org.javacream.books.warehouse.api.StoreService;
-import org.javacream.books.warehouse.impl.CounterIsbnGenerator;
 import org.javacream.books.warehouse.impl.MapBooksService;
-import org.javacream.books.warehouse.impl.PropertiesUtil;
-import org.javacream.books.warehouse.impl.SimpleStoreService;
+import org.javacream.store.api.StoreService;
+import org.javacream.store.impl.SimpleStoreService;
+import org.javacream.util.PropertiesUtil;
 
 public abstract class Context {
 	

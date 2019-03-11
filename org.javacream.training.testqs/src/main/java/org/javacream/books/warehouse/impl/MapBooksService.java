@@ -3,10 +3,10 @@ package org.javacream.books.warehouse.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.javacream.books.isbngenerator.api.IsbnGenerator;
 import org.javacream.books.warehouse.api.Book;
 import org.javacream.books.warehouse.api.BooksService;
-import org.javacream.books.warehouse.api.IsbnGenerator;
-import org.javacream.books.warehouse.api.StoreService;
+import org.javacream.store.api.StoreService;
 
 public class MapBooksService implements BooksService{
 

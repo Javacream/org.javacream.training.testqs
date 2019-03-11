@@ -1,9 +1,10 @@
-package org.javacream.books.warehouse.impl;
+package org.javacream.store.impl;
 
 import java.util.HashMap;
 import java.util.Properties;
 
-import org.javacream.books.warehouse.api.StoreService;
+import org.javacream.store.api.StoreService;
+import org.javacream.util.PropertiesUtil;
 
 public class SimpleStoreService implements StoreService {
 

@@ -1,4 +1,4 @@
-package org.javacream.books.warehouse.api;
+package org.javacream.store.api;
 
 public interface StoreService {
 

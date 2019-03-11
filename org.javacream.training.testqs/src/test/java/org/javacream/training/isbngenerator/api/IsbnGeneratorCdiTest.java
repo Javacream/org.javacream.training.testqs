@@ -1,7 +1,7 @@
-package org.javacream.training.books.warehouse.business;
+package org.javacream.training.isbngenerator.api;
 
 import org.javacream.Context;
-import org.javacream.books.warehouse.api.IsbnGenerator;
+import org.javacream.books.isbngenerator.api.IsbnGenerator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
