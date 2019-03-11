@@ -15,7 +15,7 @@ public class MathUtilPerimeterOfRectangleTest {
 		mathUtil = new MathUtil();
 	}
 	
-	@Test public void perimeterWithHeightTwoAndWidthTwentyOneIsFortytwo() {
+	@Test public void perimeterWithHeightTenAndWidthElevenIsFortytwo() {
 		double result = mathUtil.perimeterOfRectangle(HEIGHT, WIDTH);
 		Assert.assertEquals(EXPECTED_PERIMETER, result, 1e-9);
 	}
