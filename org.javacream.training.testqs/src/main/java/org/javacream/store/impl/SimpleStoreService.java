@@ -22,9 +22,12 @@ public class SimpleStoreService implements StoreService {
 
 	{
 		store = new HashMap<String, Properties>();
-		store.put("books", propertiesUtil.getProperties(ressourceName));
 	}
 
+	public void init() {
+		store.put("books", propertiesUtil.getProperties(ressourceName));
+		
+	}
 	@Override
 	public int getStock(String category, String id) {
 		try {
