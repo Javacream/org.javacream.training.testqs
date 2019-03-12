@@ -1,6 +1,4 @@
-package org.javacream.training.isbngenerator.api;
-
-import java.util.Arrays;
+package org.javacream.isbngenerator.api;
 
 import org.javacream.Context;
 import org.javacream.books.isbngenerator.api.IsbnGenerator;
@@ -8,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class IsbnGeneratorCdiDummyTest {
+public class IsbnGeneratorCdiTest {
 
 	private String generatedIsbn;
 	private String generatedIsbn2;
@@ -16,7 +14,7 @@ public class IsbnGeneratorCdiDummyTest {
 
 	@Before // Test Fixture: Definition der Testdaten, Erzeugen der zu testenden Objekte
 	public void init() {
-		isbnGenerator = Context.isbnGeneratorDummy();
+		isbnGenerator = Context.isbnGenerator();
 	}
 
 	@Test
@@ -26,14 +24,14 @@ public class IsbnGeneratorCdiDummyTest {
 	}
 
 
-	//@Test Not With Dummy
+	@Test
 	public void generatedIsbnMustHaveFourHyphens() {
 		generatedIsbn = isbnGenerator.nextIsbn();
 		String[] splitted = generatedIsbn.split("-");
 		Assert.assertEquals(5, splitted.length);
 	}
 
-	//@Test Not With Dummy
+	@Test
 	public void generatedIsbnsMustBeUnique() {
 		generatedIsbn = isbnGenerator.nextIsbn();
 		generatedIsbn2 = isbnGenerator.nextIsbn();

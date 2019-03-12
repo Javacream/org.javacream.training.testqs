@@ -1,4 +1,4 @@
-package org.javacream.training.isbngenerator.impl;
+package org.javacream.isbngenerator.impl;
 
 import org.javacream.books.isbngenerator.impl.CounterIsbnGenerator;
 import org.junit.Assert;

@@ -18,7 +18,7 @@ public class MapBooksService implements BooksService{
 		this.storeService = storeService;
 	}
 
-	private static Map<String, Book> books;
+	private Map<String, Book> books;
 
 	private IsbnGenerator isbnGenerator;
 
@@ -38,6 +38,8 @@ public class MapBooksService implements BooksService{
 			throw new IllegalArgumentException("title to short: " + title);
 		}
 		String isbn = isbnGenerator.nextIsbn();
+		//isbn = isbnGenerator.nextIsbn();
+		//isbn = "" + Math.random();
 		Book book = new Book();
 		book.setTitle(title);
 		book.setIsbn(isbn);
@@ -46,6 +48,10 @@ public class MapBooksService implements BooksService{
 //		books.put(book.getIsbn(), book);
 
 		return book.getIsbn();
+	}
+
+	public void setBooks(Map<String, Book> books) {
+		this.books = books;
 	}
 
 	@Override
