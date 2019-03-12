@@ -3,7 +3,6 @@ package org.javacream.books.warehouse.impl.mock;
 import java.util.HashMap;
 
 import org.easymock.EasyMock;
-import org.javacream.books.isbngenerator.api.IsbnGenerator;
 import org.javacream.books.warehouse.api.Book;
 import org.javacream.books.warehouse.api.BooksService;
 import org.javacream.books.warehouse.impl.MapBooksService;
